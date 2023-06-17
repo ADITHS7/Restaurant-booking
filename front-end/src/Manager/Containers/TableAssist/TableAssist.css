@@ -1,0 +1,46 @@
+.tableAssistance{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: center;
+  padding-top: 4rem;
+  padding-left: 4rem;
+}
+
+.tableAssistance .table_ass{
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ height: 6rem;
+ width: 18rem;
+ position: relative;
+ 
+}
+.tableAssistance .table_ass_contnr{
+background-color: var(--pri-white);
+padding: 1rem;
+border-radius: .5rem;
+
+}
+
+.tableAssistance .table_ass_contnr:hover{
+  background-color: rgb(240, 129, 129);
+}
+
+.table_ass i{
+  position: absolute;
+  z-index: 2;
+  font-size: 2rem;
+  color: var(--pri-black);
+  top: -2rem;
+  left: 8rem;
+}
+.table_ass .table_num{
+  font-size: 2rem;
+  text-align: center;
+}
+.table_ass .date_time{
+  width: 16rem;
+  text-align: center;
+}

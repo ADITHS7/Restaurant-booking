@@ -1,0 +1,17 @@
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+:root
+{
+  --pri-orange:rgba(242, 117, 1, 0.8);
+  --sec-orange:rgba(242, 117, 1, 1);
+  --ter-orange:rgba(219, 212, 151, 0.6);
+  --pri-white: rgba(232, 227, 227, 1);
+  --sec-white:rgba(217, 217, 217, 1);
+  --pri-black:rgba(21, 17, 17, 0.79);
+}
+
+
+

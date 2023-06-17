@@ -1,0 +1,158 @@
+.cart_items{
+  margin: 30px auto;
+  width: 50%;
+  background-color: var(--pri-orange);
+  border: .02rem solid var(--pri-black);
+  border-radius: 5px;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: space-around;
+}
+
+.cart_items_header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  font-size: 20px;
+  border-bottom: 2px solid var(--pri-black);
+}
+
+.cart_items_empty{
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.clear_cart button{
+  height: 2rem;
+  width: 5rem;
+  border: none;
+  outline: none;
+  background-color: rgb(208, 26, 26);
+  color: wheat;
+  border-radius: .2rem;
+}
+
+.cart_items_image{
+  width: 100px;
+  height: auto;
+  border: none;
+  border-radius: 10rem;
+}
+
+.cart_items_list{
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  margin-left: 5%;
+  background-color: var(--pri-white);
+  border-radius: .2rem;
+}
+
+.cart_items_name,
+.cart_items_functions{
+  width: 25%;
+}
+
+.cart_items_functions p{
+  margin-left: .7rem;
+}
+
+.cart_items_name{
+  text-transform: uppercase;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.cart_items_add,
+.cart_items_remove{
+width: 30px;
+margin-right: 15px;
+font-weight: 700;
+border: none;
+border-radius: 3px;
+font-size: 18px;
+color: white;
+cursor: pointer;
+}
+
+.cart_items_add{
+background-color: green;
+}
+
+.cart_items_remove{
+  background-color: red;
+}
+
+.cart_items_add:active{
+  transform: translateY(1.2px);
+}
+
+.cart_items_remove:active{
+  transform: translateY(1.2px);
+}
+
+.cart_items .cart_items_price{
+  padding: 1rem;
+  color: black;
+  
+}
+
+.cart_items .cart_items_price i{
+  font-size: 1rem;
+}
+
+.cart_items .cart_item_price{
+  padding-left: 3rem;
+  font-size: 1.2rem;
+  
+}
+
+.cart_items .cart_item_price i{
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.cart_items_total_price_proceed{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart_items_total_price{
+  
+  padding: 1rem 4rem;
+  background-color: var(--sec-white);
+  color: black;
+  border-radius: .2rem;
+ 
+  
+}
+
+.cart_items_total_price i{
+ color: rgb(50, 46, 46);
+ font-size: 1rem;
+ text-decoration: none;
+}
+
+.cart_items_total_price_proceed ._proceed_btn button{
+  width: 8rem;
+  height: 3rem;
+  color: white;
+  background-color: green;
+  border: none;
+  font-weight: 400;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+}
+

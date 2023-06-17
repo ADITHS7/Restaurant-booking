@@ -1,0 +1,6 @@
+export {default as TableOrders} from './TableOrders/TableOrders'
+export {default as OnlineOrders} from './OnlineOrders/OnlineOrders'
+export {default as Home } from './Home/Home'
+export {default as AddProduct } from './AddProduct/AddProduct'
+export {default as Login} from './Login/Login'
+// export {default as } from '.'

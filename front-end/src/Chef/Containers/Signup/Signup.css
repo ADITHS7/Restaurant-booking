@@ -1,0 +1,123 @@
+.signup {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.signup_right {
+  flex: 1;
+  background-color: var(--pri-orange);
+  position: relative;
+}
+
+ .signup_left {
+  flex: 1;
+  
+
+  position: relative;
+}
+
+.signup_left_container { 
+  /* background-color: var(--pri-orange); */
+  background-color: var(--pri-orange);
+  
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right:  0;
+  top: 4rem;
+  border-radius: 2rem 0rem 0rem 2rem;
+}
+
+.signup_right_container {
+  
+   background-image: url("E:/Main project/front-end/src/Chef/Assets/signupbg/signupbg.jpeg");
+   background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 80%;
+  
+  color: var(--sec-orange);
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  border-radius: 0rem 2rem 2rem 0rem;
+  display: flex;
+
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 1rem; 
+ }
+
+
+
+.signup_right_container .signup_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+} 
+
+.signup_right_container .social_links button {
+  border: none;
+  color: var(--pri-orange);
+  background-color: white;
+  outline: none;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  box-shadow: 0 0 0 1px whitesmoke;
+  margin: auto 0.5rem;
+  cursor: pointer;
+}
+
+.signup_form input {
+  width: 75%;
+  height: 3rem;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  padding-left: 1rem;
+}
+
+.signup_form button {
+  width: 37%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: var(--pri-black);
+  cursor: pointer;
+} 
+
+.signup_left_container h1{
+ color: white;
+ width: 16rem;
+ padding-top: 8rem;
+ font-size: 2rem;
+ font-weight: bolder;
+}
+
+.signup_left_container p{
+  color: white;
+  padding-top: 1.5rem;
+ }
+
+ .signup_left_container button{
+  margin-top: 2.5rem;
+  width: 37%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: var(--pri-black);
+  cursor: pointer;
+ }  

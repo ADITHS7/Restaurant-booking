@@ -1,0 +1,65 @@
+.sidebar{
+  width:40vh;
+  padding: 40px 40px 40px 40px;
+  background-color: rgba(242, 117, 1, 0.8);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  font-family: 'Poppins', sans-serif;
+
+  
+}
+
+.chef_image{
+  position: absolute;
+  height: 16rem;
+  width: 16rem;
+
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar nav{
+  margin-top: 12rem;
+ position: relative;
+ z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: baseline;
+}
+
+.sidebar nav a{
+  text-decoration: none;
+  text-align: center;
+  color: var(--pri-black);
+  font-size: 1rem;
+  padding-left: 4px;
+  width: 16rem;
+  height: 2rem;
+  background-color:whitesmoke;
+  border-radius: 4px;
+
+  padding-bottom: 2px;
+  padding-top: 6px;
+  
+}
+
+
+.order_len{
+  border: none;
+  position: relative;
+  top: -3rem;
+  left: 15.5rem;
+  width:1.5rem;
+  height: 1.5rem;
+  background-color: var(--pri-white);
+  border-radius: 50%;
+  color: black;
+  font-weight: bold;
+  
+ 
+}

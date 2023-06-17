@@ -1,0 +1,133 @@
+.signin {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.signin_left {
+  flex: 1;
+  background-color: var(--pri-orange);
+  position: relative;
+}
+
+.signin_right {
+  flex: 1;
+
+  position: relative;
+}
+
+.signin_left_container {
+  /* background-color: white; */
+  background-image: url("E:/Main project/front-end/src/Chef/Assets/signupbg/signupbg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 80%;
+  color: var(--sec-orange);
+  position: absolute;
+  right: 0;
+  top: 4rem;
+  border-radius: 2rem 0rem 0rem 2rem;
+  display: flex;
+
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.signin_right_container {
+  background-color: var(--pri-orange);
+  /* background-image: url("E:/Main project/front-end/src/Chef/Assets/signupbg/signupbg1.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  border-radius: 0rem 2rem 2rem 0rem;
+}
+
+.signin_left_container .signin_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.signin_left_container .social_links button {
+  border: none;
+  color: var(--pri-orange);
+  background-color: white;
+  outline: none;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  box-shadow: 0 0 0 1px whitesmoke;
+  margin: auto 0.5rem;
+  cursor: pointer;
+}
+
+.signin_form input {
+  width: 75%;
+  height: 3rem;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  padding-left: 1rem;
+}
+
+.signin_form .invalid_input{
+  
+  color: yellow;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+ text-align: start;
+
+ width: 75%;
+  
+}
+
+.signin_form button {
+  width: 37%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: var(--pri-black);
+  cursor: pointer;
+}
+
+.signin_right_container h1{
+ color: white;
+ width: 16rem;
+ padding-top: 8rem;
+ font-size: 2rem;
+ font-weight: bolder;
+}
+
+.signin_right_container p{
+  color: white;
+  padding-top: 1.5rem;
+ }
+
+ .signin_right_container button{
+  margin-top: 2.5rem;
+  width: 37%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: var(--pri-black);
+  cursor: pointer;
+ }

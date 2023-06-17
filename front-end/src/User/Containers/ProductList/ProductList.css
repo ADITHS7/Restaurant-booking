@@ -1,0 +1,64 @@
+.user_prd_container{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+ padding: 2rem;
+  
+  gap: 5rem;
+  margin:5rem auto;
+  
+}
+
+.user_prd_card{
+width: 14rem;
+height: 24rem;
+outline: .01rem solid var(--pri-black);
+background-color: var(--sec-white);
+border-radius: .5rem;
+overflow: hidden;
+padding-bottom: 1rem;
+
+}
+
+.user_prd_card img{
+  width: 14rem;
+  height: 11rem;
+
+}
+.user_prd_card .prd_card_down{
+  padding: 1rem;
+}
+
+.user_prd_card .prd_card_down .prd_name{
+  text-transform: uppercase;
+  width: 14rem;
+  height: 2rem;
+
+}
+
+.user_prd_card .prd_desc{
+ width:14rem;
+ height: 4rem;
+}
+
+.user_prd_card .prd_desc p{
+  color: var(--pri-black);
+}
+
+.user_prd_card .cta{
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-bottom: 5rem;
+}
+
+.user_prd_card .cta .cart_btn button{
+  width: 3rem;
+  height: 3rem;
+  background-color: green;
+  border: none;
+  color: white;
+  outline: none;
+  border-radius: .5rem;
+}
+

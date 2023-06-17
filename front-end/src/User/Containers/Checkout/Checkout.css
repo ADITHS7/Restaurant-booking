@@ -1,0 +1,53 @@
+.checkout{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--pri-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout_container{
+  width: 50%;
+  height: 80vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  
+}
+
+.checkout_container .invalid_input{
+  
+  color: rgb(232, 55, 55);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: .1rem;
+  margin-bottom: -2rem;
+  padding-bottom: 1rem;
+ text-align: start;
+ display: block;
+ width: 75%;
+  
+}
+
+.checkout .checkout_container input{
+  width: 40rem;
+  height: 2rem;
+  border: .1rem solid var(--sec-white);
+  padding-left: 1rem;
+}
+
+.checkout .checkout_container button{
+  background-color: var(--sec-orange);
+  color: white;
+  border: none;
+  width: 42rem;
+  height: 3rem;
+  margin-bottom: 0;
+  font-weight: bold;
+}

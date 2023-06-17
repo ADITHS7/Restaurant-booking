@@ -1,0 +1,109 @@
+._home{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  background-color: var(--pri-white);
+  position: relative;
+  padding-top: 4rem;
+  overflow: hidden;
+}
+
+._home .home_left{
+  flex: 1;
+  margin-left: 6rem;
+  
+}
+
+._home .home_right{
+  flex: 1;
+  padding-top: 4rem;
+  padding-left: 18rem;
+}
+
+ ._head{
+  width: 20rem;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  padding: 2rem;
+}
+.desc{
+  width: 32rem;
+  padding: 1rem 2rem;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
+.desc p{
+  color: var(--pri-black);
+}
+
+.home_left .btn button{
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: var(--sec-orange);
+  border: none;
+  outline: none;
+  padding: .8rem 1.5rem;
+  color: white;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  border-radius: .5rem;
+  font-size: 1rem;
+}
+
+.home_left .btn button:hover{
+  background-color: var(--pri-orange);
+  color: var(--pri-black);
+}
+
+.home_left .btn button:active{
+  background-color: green;
+  color: antiquewhite;
+  transform: translateY(.2rem);
+}
+
+.home_right .circle{
+  width: 24rem;
+  position: absolute;
+  z-index: 1;
+  height: 24rem;
+  border-radius: 50%;
+  outline: .05rem solid rgba(0, 0, 0, 0.13);
+}
+
+.home_right .mainImage {
+  position: relative;
+  z-index: 2;
+  width: 40rem;
+  top: -5rem;
+  left: -6rem;
+}
+
+.home_right .subImage1{
+  z-index: 2;
+  position: relative;
+  top: -11.5rem;
+  left: -4rem;
+  
+}
+
+.home_right .subImage2{
+  z-index: 2;
+  position: relative;
+  top: -14rem;
+  left: 6.8rem;
+}
+
+.home_right .subImage3{
+  z-index: 2;
+  position: relative;
+  top: -30rem;
+  right: -16rem;
+  
+}
+
+
+
+.subImage{
+ 
+  width: 10rem;
+}

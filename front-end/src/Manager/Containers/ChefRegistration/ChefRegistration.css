@@ -1,0 +1,127 @@
+
+.chefReg{
+ 
+  margin-left: 15rem;
+}
+
+
+ 
+
+.chefReg_left_container { 
+  background-color: var(--pri-orange);
+  
+  
+  width: 40%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  
+  top: 4rem;
+  border-radius: 2rem 2rem 2rem 2rem;
+}
+
+.chefReg_right_container {
+  
+   background-image: url("E:/Main project/front-end/src/Chef/Assets/signupbg/signupbg.jpeg");
+   background-repeat: no-repeat;
+  background-size: cover;
+  width: 40%;
+  height: 80%;
+  
+  color: var(--sec-orange);
+  position: absolute;
+ 
+  top: 4rem;
+  border-radius: 2rem 2rem 2rem 0rem;
+  display: flex;
+
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 1rem; 
+ }
+
+
+
+.chefReg_right_container .chefReg_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+} 
+
+.chefReg_right_container .social_links button {
+  border: none;
+  color: var(--pri-orange);
+  background-color: white;
+  outline: none;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  box-shadow: 0 0 0 1px whitesmoke;
+  margin: auto 0.5rem;
+  cursor: pointer;
+}
+
+.chefReg_form input {
+  width: 75%;
+  height: 3rem;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  padding-left: 1rem;
+ 
+}
+
+.chefReg_form .invalid_input{
+  
+  color: yellow;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+ text-align: start;
+
+ width: 75%;
+  
+}
+
+.chefReg_form button {
+  width: 37%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: var(--pri-black);
+  cursor: pointer;
+} 
+
+.chefReg_left_container h1{
+ color: white;
+ width: 16rem;
+ padding-top: 8rem;
+ font-size: 2rem;
+ font-weight: bolder;
+}
+
+.chefReg_left_container p{
+  color: white;
+  padding-top: 1.5rem;
+ }
+
+ .chefReg_left_container button{
+  margin-top: 2.5rem;
+  width: 37%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: var(--pri-black);
+  cursor: pointer;
+ }  

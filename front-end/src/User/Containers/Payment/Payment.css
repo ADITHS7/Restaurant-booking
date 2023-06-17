@@ -1,0 +1,101 @@
+.payment{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment_container{
+  width: 40rem;
+  height: 20rem;
+  background-color: var(--pri-white);
+}
+
+.payment_select{
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.payment_select span{
+  margin: 1rem;
+}
+
+.btn_pay{
+  width: 20rem;
+  height: 3rem;
+  margin-left: 11rem;
+  margin-top: 2rem;
+  background-color: var(--sec-orange);
+  border: none;
+  outline: none;
+  border-radius: .5rem;
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.proceed_btn{
+  width: 20rem;
+  height: 3rem;
+  margin-left: 11rem;
+  margin-top: 2rem;
+  background-color: var(--sec-orange);
+  border: none;
+  outline: none;
+  border-radius: .5rem;
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+ 
+.cardElement{
+  border: .01rem solid var(--pri-black);
+  height: 4rem;
+  padding: 2rem;
+  width: 80%;
+  margin: auto;
+  
+}
+
+.cod_dlg_box{
+  height: 30vh;
+  width: 80vh;
+  background-color: var(--sec-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  justify-content: space-around;
+  gap: 1rem;
+  position: fixed;
+  top: 10rem;
+  
+ 
+  z-index: 1;
+}
+
+.cod_dlg_box i{
+  font-size: 7rem;
+  color: rgb(14, 110, 14);
+  
+}
+
+.cod_dlg_box p{
+  font-size: 1.5rem;
+}
+
+.cod_dlg_box button{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 150px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgb(14, 110, 14);
+}
+
+

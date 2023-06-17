@@ -1,0 +1,106 @@
+.footer{
+  display: flex;
+  background-color: var(--sec-white);
+  width: 100%;
+  height: 50vh;
+  position: relative;
+
+ 
+}
+.f_left{
+flex: 1;
+display: flex;
+flex-direction: column;
+
+justify-content: space-around;
+align-items: flex-start;
+padding-left: 9rem;
+
+
+}
+
+.f_left .lef_p p{
+  
+  width: 17rem;
+  font-size: 1rem;
+}
+
+.term p{
+  color: var(--pri-black);
+}
+
+.f_left input{
+  width: 13rem;
+  height: 3rem;
+  border: none;
+  text-align: center;
+  outline: none;
+  background-color: var(--ter-orange);
+}
+
+.f_left button{
+  height: 3rem;
+  width: 6rem;
+  border: none;
+  background: var(--pri-orange);
+  font-weight: bold;
+  color: var(--pri-black);
+}
+
+.f_right{
+flex: 1;
+display: flex;
+align-items: baseline;
+justify-content: space-between;
+padding-top: 6rem;
+padding-right: 2rem;
+}
+
+.f_right p{
+color: #000;
+padding-bottom: .6rem;
+font-weight: bold;
+}
+
+.f_right a:hover{
+  
+  color: #002;
+  text-decoration: underline;
+}
+
+.f_right a{
+  color: var(--pri-black);
+  padding: .1rem;
+  text-decoration: none;
+}
+
+.f_right .info {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.f_right .categ {
+  display: flex;
+  flex-direction: column;
+}
+
+.f_right .useful {
+  display: flex;
+  flex-direction: column;
+}
+
+.f_right .social {
+  display: flex;
+  flex-direction: column;
+}
+
+.copy{
+  position: absolute;
+  bottom: 1rem;
+  right: 5rem;
+  
+}
+.copy p{
+  color: var(--pri-black);
+}
