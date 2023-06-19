@@ -56,3 +56,52 @@
 width: 5rem;
 border-radius: .2rem;
 }
+
+@media only screen and (max-width: 360px){
+  .about{
+    width: 360px;
+    overflow: hidden;
+    padding-top: 1rem;
+    display: flex;
+    padding-bottom: 1rem;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .about .about_Heading{
+   
+    text-align: center;
+    width: 360px;
+  }
+  
+  .about_Heading h1{
+    font-size: 2rem;
+    
+  }
+
+  .aboutUs_Containors{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 330px;
+  }
+
+  .aboutUs_Containors::-webkit-scrollbar-track{
+    background: #f1f1f1;
+  }
+
+  .aboutUs_Containors .about_Containor{
+    height: 18rem;
+    width: 330px;
+    background-color: white;
+    border-radius: .5rem;
+    
+  }
+
+  .about_Containor .desc{
+    width: 300px;
+    padding: 1rem;
+   }
+
+  
+}

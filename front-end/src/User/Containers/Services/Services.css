@@ -1,44 +1,88 @@
-.services{
+.services {
   width: 100%;
   height: 90vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: var(--sec-white);
-  
 }
 
-.services .heading{
+.services .heading {
   padding: 4rem;
 }
 
-.services .heading h1{
+.services .heading h1 {
   font-size: 2.5rem;
   color: var(--pri-black);
 }
 
-.service_containors{
+.service_containors {
   display: flex;
-  flex-wrap: wrap;
+
   gap: 4rem;
   align-items: center;
-  
 }
 
-.service_containors .service{
-  height: 20rem;
+.service_containors .service {
+  height: 18rem;
   background-color: white;
-  width: 14rem;
+  width: 12rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  padding:2rem 1rem;
-  border-radius: .5rem;
-  
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  opacity: 0.8;
 }
 
-.service_containors .service i{
-  font-size:  10rem;
+.service_containors .service i {
+  font-size: 10rem;
   color: var(--pri-orange);
+}
+
+@media only screen and (max-width: 360px) {
+  .services {
+    width: 360px;
+    height: 40rem;
+  }
+
+  .services .heading {
+    width: 360px;
+  }
+
+  .services .heading h1 {
+    font-size: 2.5rem;
+    color: var(--pri-black);
+    text-align: center;
+  }
+
+  .service_containors {
+    width: 340px;
+    height: 480px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 22px;
+    display: flex;
+    padding-left: 4rem;
+  }
+
+  .service_containors::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  .services .service {
+    height: 250px;
+  }
+
+  .service_containors .service p {
+    width: 300px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .service_containors .service i {
+    font-size: 100px;
+    color: var(--pri-orange);
+  }
 }

@@ -5,7 +5,7 @@
   background-color: var(--pri-white);
   position: relative;
   padding-top: 4rem;
-  overflow: hidden;
+ 
 }
 
 ._home .home_left{
@@ -20,21 +20,20 @@
   padding-left: 18rem;
 }
 
- ._head{
+._home ._head{
   width: 20rem;
   font-size: 1.5rem;
   line-height: 4rem;
   padding: 2rem;
 }
-.desc{
+ ._home .desc{
   width: 32rem;
   padding: 1rem 2rem;
   line-height: 1.5rem;
   font-size: 1.2rem;
-}
-.desc p{
   color: var(--pri-black);
 }
+
 
 .home_left .btn button{
   font-weight: bold;
@@ -106,4 +105,51 @@
 .subImage{
  
   width: 10rem;
+}
+
+@media only screen and (max-width: 360px){
+  ._home{
+    display: flex;
+    flex-direction: column;
+    height: 33rem;
+   width: 360px;
+   overflow: hidden;
+   
+    
+  }
+  ._home .home_left{
+   z-index: 2;
+    position: absolute;
+    width: 360px;
+    margin-left: 0;
+   
+   
+  }
+  ._home .home_right{
+    z-index: 1;
+    position: relative;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0rem;
+    width: 360px;
+    opacity: 0.7;
+  }
+
+
+  ._home ._head{
+    width: 20rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    padding-left: 1rem;
+  }
+  ._home .desc{
+    font-weight: 600;
+    font-size: 1rem;
+    width: 340px;
+    height: 4rem;
+    
+   padding-top: 0px;
+    padding-left: 20px;
+  }
+
 }

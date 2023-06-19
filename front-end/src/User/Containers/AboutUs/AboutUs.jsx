@@ -19,10 +19,8 @@ const AboutUs = () => {
             <i class="fa-solid fa-star"></i>
           </div>
           <div className="desc">
-           
-              "I really like there food taste so i regular taste them. One of my
-              favourite Mexican food restaurant"
-            
+            "I really like there food taste so i regular taste them. One of my
+            favourite Mexican food restaurant"
           </div>
           <div className="personal_Dtls">
             <div className="person_Img">
@@ -44,10 +42,8 @@ const AboutUs = () => {
             <i class="fa-solid fa-star"></i>
           </div>
           <div className="desc">
-           
-              “One of my favourite Mexican food restaurant I can assure you this
-              food is authentic”
-            
+            “One of my favourite Mexican food restaurant I can assure you this
+            food is authentic”
           </div>
           <div className="personal_Dtls">
             <div className="person_Img">
@@ -69,11 +65,8 @@ const AboutUs = () => {
             <i class="fa-solid fa-star"></i>
           </div>
           <div className="desc">
-            
-             
-              "Wonderful service and atmosphere really like there food taste so
-              i regularly taste them ”
-            
+            "Wonderful service and atmosphere really like there food taste so i
+            regularly taste them ”
           </div>
           <div className="personal_Dtls">
             <div className="person_Img">
