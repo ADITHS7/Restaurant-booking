@@ -96,6 +96,58 @@
   font-size: 1rem;
   font-weight: bold;
   background-color: rgb(14, 110, 14);
+  outline: none;
+  border: none;
+}
+
+@media only screen and (max-width: 360px){
+  .payment{
+    width: 360px;
+    overflow: hidden;
+   
+  }
+  .payment_container{
+    width: 340px;
+    height: 270px;
+    padding-top: 0;
+  }
+
+  .payment_select span{
+    margin-right:0rem;
+  }
+
+  .payment_select{
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .cardElement{
+    border: .01rem solid white;
+    height: 1.5rem;
+    
+  }
+
+  .btn_pay{
+    width: 340px;
+    height: 3rem;
+    margin-left: 0rem;
+  
+  }
+
+  .proceed_btn{
+    width: 330px;
+    margin-left: 0.3rem;
+  }
+  .cod_dlg_box{
+    width: 360px;
+    height: 300px;
+    padding-bottom: 300px;
+    padding-top: 40px;
+    background-color: white;
+    margin-top: 0;
+    text-align: center;
+  }
+
 }
 
 

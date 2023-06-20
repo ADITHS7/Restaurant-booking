@@ -3,13 +3,8 @@ import './Navbar.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-
- 
-
-
-
-
 const Navbar = ({cartItems}) => {
+  const [menu,menuState]=useState(false);
   const [Atable,setATable]=useState('')
   const [tableNo,setTableNo]=useState('')
   useEffect(()=>{
@@ -20,6 +15,7 @@ const Navbar = ({cartItems}) => {
   const [dlg,setDlg]=useState(false)
   const tableAssist = ()=>{
     setDlg(true)
+    menuState(false)
   }
   const tableCall=async()=>{
   const formData = new FormData();
@@ -37,27 +33,47 @@ const Navbar = ({cartItems}) => {
       
   
   }
+
+ const nav =
+  <div className='nav_con'>
+     <Link  to={`${(Atable==="true")?`/?table=true&tableNo=${tableNo}`:'/'}`} onClick={()=>{menuState(false)}} >Home</Link>
+          <Link to={`${(Atable==="true")?`/menu?table=true&tableNo=${tableNo}`:'/menu'}`  } onClick={()=>{menuState(false)}}>Menu</Link>
+          {Atable==="true"?
+          <p onClick={tableAssist}><i class="fa-brands fa-facebook-messenger"  ></i>Table Assist</p>:null}
+       
+  </div>
+ 
+
   return (
     <div className='navbar'> 
+       
+       <div className="menu-icon">
+        <i class="fa-solid fa-bars" onClick={()=>{menu?menuState(false):menuState(true)}}></i>
+      </div>
     
-      
         <div className='nav_name'>
+        
         <h3>Besnik.</h3>
         </div>
-        <div className='nav_con' >
+        <div className='desktop' >
+          
+          {nav}
+         
+          </div>
+        {menu?
+        <div className='mobile' >
           
         
-        <Link to={`${(Atable==="true")?`/?table=true&tableNo=${tableNo}`:'/'}`} >Home</Link>
-        <Link to={`${(Atable==="true")?`/menu?table=true&tableNo=${tableNo}`:'/menu'}`}>Menu</Link>
-        {Atable==="true"?
-        <p onClick={tableAssist}><i class="fa-brands fa-facebook-messenger" ></i>Table Assist</p>:null}
+        {nav}
         </div>
+        :null}
         <div className='nav_but'>
-        <button >Sign up</button>
+       
         <div className='cart_div'>
-        <Link to ={`${(Atable==="true")?`/cart?table=true&tableNo=${tableNo}`:'/cart'}`}><i class="fa-solid fa-cart-shopping"></i> </Link>
-        {cartItems.length}
+        <Link to ={`${(Atable==="true")?`/cart?table=true&tableNo=${tableNo}`:'/cart'}`} ><i class="fa-solid fa-cart-shopping"></i> </Link>
+        <span>{cartItems.length}</span>
         </div>
+        
 
       {
         dlg?<div className='dlg_box'>

@@ -13,15 +13,21 @@
   
   
 }
+
+
+
+.menu-icon{
+  display: none;
+}
 .navbar a{
   text-decoration: none;
   color: var(--pri-black);
 }
 
-.navbar .nav_con{
+.desktop .nav_con{
   display: flex;
-  width: 40%;
-  
+
+  text-align: center;
   gap: 4rem;
   cursor: pointer;
 }
@@ -94,4 +100,80 @@ border-radius: .5rem;
 
 .navbar .dlg_box .buttons .grn_btn{
   background-color: green;
+}
+
+@media only screen and (max-width: 360px){
+  .navbar{
+    width: 360px;
+
+   
+    z-index: 9;
+    position: fixed;
+  }
+   .desktop{
+    display: none;
+   }
+  .menu-icon{
+    display: block;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+    z-index: 10;
+    position: fixed;
+  }
+  
+  .mobile   {
+   
+   
+    
+    background-color: #fff;
+    position: fixed;
+   
+    
+  }
+
+  .mobile .nav_con{
+    display: flex;
+    flex-direction: column;
+    padding-top: 14rem;
+    padding-left: 4rem;
+    padding-bottom: 4rem;
+    padding-right: 4rem;
+    gap: 1rem;
+  }
+
+  
+  .navbar .nav_name{
+   padding-left: 4rem;
+   font-size: 1.4rem;
+   z-index: 1;
+    
+  }
+   .cart_div i{
+    font-size: 1.5rem;
+   
+   }
+  .cart_div{
+    font-size: 1rem;
+    position: relative;
+    right: -1rem;
+    
+  }
+  .cart_div span{
+    position: relative;
+    top: -1rem;
+    left: -.6rem;
+  }
+
+  .navbar .dlg_box{
+    position: fixed;
+    justify-content: center;
+    padding-left: 2rem;
+    z-index: 6;
+    background-color:white;
+    height: 10rem;
+    width: 300px;
+    top: 10rem;
+    left: 0rem;
+    
+   }
 }

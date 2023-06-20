@@ -156,3 +156,79 @@ background-color: green;
   font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 360px){
+  .cart_items{
+    margin-top: 40px;
+    width: 360px;
+    border: .02rem solid var(--pri-black);
+    border-radius: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
+  }
+  .cart_items_list{
+  
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    font-size: 10px;
+  
+
+  }
+  .cart_items_image{
+    width: 80px;
+    height: auto;
+    
+    border-radius: 10rem;
+  }
+
+  .cart_items_add,
+.cart_items_remove{
+width: 20px;
+margin-right: 0px;
+font-weight: 400;
+
+}
+.cart_items_functions p{
+  margin-left: .7em;
+ 
+  
+}
+
+
+
+.cart_items .cart_items_price i{
+  font-size: 0.6rem;
+}
+
+.cart_items .cart_items_price{
+  padding-left: 0rem;
+  font-size: 0.6rem;
+  width: 80px;
+ 
+  
+}
+.cart_items .cart_item_price{
+  font-size: 0.6rem;
+  width: 60px;
+  padding-left: 0;
+}
+.cart_items .cart_item_price i{
+  font-size: 0.6rem;
+  text-decoration: none;
+}
+
+.cart_items_total_price{
+  
+  padding: .5rem 1rem;
+  margin-left: 1rem;
+ 
+  
+}
+.cart_items_total_price_proceed ._proceed_btn button{
+ margin-right: 1rem;
+}
+ 
+}
+

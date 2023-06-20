@@ -174,6 +174,7 @@ const Payment = ({cartItems}) => {
   </div>:<div><button onClick={()=>{placeOrder()}} className='proceed_btn'>Proceed</button></div>}</div>
   
   {cDlg?<div className='cod_dlg_box'>
+  <div  className='cod_dlg_cntnr'>
     <div>
     <i class="fa-regular fa-circle-check"></i>
     </div><div>
@@ -181,14 +182,17 @@ const Payment = ({cartItems}) => {
      </div><div>
      <button  onClick={()=>{navigate(`${(table==="true")?`/menu?table=true&tableNo=${tableNo}`:'/menu'}`)}}>OK</button>
     </div>
+    </div>
   </div>:null}
    {oDlg?<div className='cod_dlg_box'>
+    <div  className='cod_dlg_cntnr'>
       <div>
       <i class="fa-regular fa-circle-check"></i>
       </div><div>
        <p>Payment Successfull Order Will Reach You Soon </p> 
        </div><div>
        <button onClick={()=>{navigate(`${(table==="true")?`/menu?table=true&tableNo=${tableNo}`:'/menu'}`)}}>OK</button>
+      </div>
       </div>
     </div>:null}
   </div>

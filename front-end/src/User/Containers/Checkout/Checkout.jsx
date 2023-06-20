@@ -26,8 +26,10 @@ const Checkout = () => {
    }
   
     localStorage.setItem("address",JSON.stringify(address))
-    const addr = JSON.parse(localStorage.getItem("address")   )
-    console.log(addr)
+    localStorage.setItem("phone",JSON.stringify(address.phone))
+
+    // const addr = JSON.parse(localStorage.getItem("address")   )
+    // console.log(addr)
     navigate('/payment')
  }
 
