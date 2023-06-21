@@ -10,13 +10,14 @@ const OrderHistory = ({data}) => {
     axios.get('http://localhost:5000/itemfind/'+data.oid)
     .then((response)=>{
     setOData(response.data)
+    
     })
     .catch((err)=>{
       console.log(err)
     })
   }
 
-  
+
 
   useEffect(()=>{
    loadData()
@@ -26,10 +27,10 @@ const OrderHistory = ({data}) => {
   let src = 'http://localhost:5000/uploads/'+oData.url
   return (
     <div className='online_order'>
-      {data.status==="successfull"?
+      {data.status!=="pending"? 
       <div className='o_ord_container'>
       <div className='order_time'>
-      <p>{data.date}</p>
+      <p>{data.cheTime}</p>
       </div>
      <div className='order_dtls'>
       <div className='order_name_img'>

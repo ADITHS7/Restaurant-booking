@@ -189,6 +189,24 @@ app.post('/orders',uploads.none(), async (req, res) => {
   order.save().then(()=>{console.log("data added succesfully")})
   res.json({ message: 'File uploaded successfully.' });
 });
+
+
+//update status of order
+
+app.put("/updatestatus/:id",jsonparser(),async(req,res)=>{
+  
+  
+  const order = await Order.updateOne(
+   
+     {_id:req.params.id},
+     {$set: {status:"cooked",cheTime:`${Date()}`}},
+    
+    
+  )
+  res.send(order)
+ })
+
+
 //ordered data finding using find pending orders
 app.get('/orders',async(req,res)=>{
   const order =  await Order.find({status:"pending"})
@@ -199,9 +217,9 @@ app.get('/orders',async(req,res)=>{
   }
 })
 
-//successfull orders
+//cooked orders
 app.get('/orders/success',async(req,res)=>{
-  const order =  await Order.find({status:"successfull"})
+  const order =  await Order.find()
   if(order.length>0){
     res.send(order)
   }else{
@@ -273,19 +291,5 @@ app.post('/managersignin',jsonparser() ,async(req,res)=>{
 })
 
 
-//update status of order
-
-app.put("/updatestatus/:id",jsonparser(),async(req,res)=>{
-  
-  
-  const order = await Order.updateOne(
-   
-     {_id:req.params.id},
-     {$set: {status:"successfull",cheTime:`${Date()}`}},
-    
-    
-  )
-  res.send(order)
- })
 
 app.listen(5000)

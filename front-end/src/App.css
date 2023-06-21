@@ -1,19 +1,14 @@
-._chef{
+._chef {
   display: flex;
 }
-.chef_Content{
-
+.chef_Content {
   margin-left: 30rem;
 }
 
-.outlet{
- 
+.outlet {
   padding-top: 4rem;
-  
-  
 }
 
-.manager_outlet{
-padding-left: 52vh;
+.manager_outlet {
+  padding-left: 52vh;
 }
-

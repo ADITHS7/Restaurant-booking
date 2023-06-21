@@ -1,6 +1,6 @@
-.navbar{
+.navbar {
   display: flex;
-  
+
   background-color: var(--pri-white);
   width: 100%;
   height: 4rem;
@@ -10,21 +10,17 @@
   margin: 0;
   z-index: 5;
   position: fixed;
-  
-  
 }
 
-
-
-.menu-icon{
+.menu-icon {
   display: none;
 }
-.navbar a{
+.navbar a {
   text-decoration: none;
   color: var(--pri-black);
 }
 
-.desktop .nav_con{
+.desktop .nav_con {
   display: flex;
 
   text-align: center;
@@ -32,106 +28,92 @@
   cursor: pointer;
 }
 
-.navbar .nav_name{
+.navbar .nav_name {
   width: 30%;
   display: flex;
   justify-content: center;
- font-size: 1.7rem;
-  
+  font-size: 1.7rem;
 }
 
-.navbar .nav_but{
+.navbar .nav_but {
   width: 30%;
   display: flex;
   justify-content: space-around;
   font-size: 1.7rem;
   margin-left: 2rem;
- 
 }
 
-
-
-.navbar .cart_div a{
+.navbar .cart_div a {
   margin-top: 1.9rem;
   font-size: 2rem;
 }
 
-.nav_but button{
-background-color: var(--sec-orange);
-height: 2.5rem;
-width: 5rem;
-border: none;
-color: #fff;
-font-weight: bold;
-border-radius: .5rem;
+.nav_but button {
+  background-color: var(--sec-orange);
+  height: 2.5rem;
+  width: 5rem;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.5rem;
 }
 
-.navbar .dlg_box{
- position: fixed;
- z-index: 6;
- background-color: white;
- height: 10rem;
- width: 20rem;
- top: 3rem;
- 
+.navbar .dlg_box {
+  position: fixed;
+  z-index: 6;
+  background-color: white;
+  height: 10rem;
+  width: 20rem;
+  top: 3rem;
 }
 
-
-
-.navbar .dlg_box .buttons{
+.navbar .dlg_box .buttons {
   display: flex;
   gap: 4rem;
   cursor: pointer;
 }
 
-.navbar .dlg_box .buttons button{
+.navbar .dlg_box .buttons button {
   background-color: var(--sec-orange);
   width: 4rem;
   height: 3rem;
   text-align: center;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   padding: 1rem;
-  
 }
 
-.navbar .dlg_box .buttons .red_btn{
+.navbar .dlg_box .buttons .red_btn {
   background-color: rgb(231, 34, 34);
 }
 
-.navbar .dlg_box .buttons .grn_btn{
+.navbar .dlg_box .buttons .grn_btn {
   background-color: green;
 }
 
-@media only screen and (max-width: 360px){
-  .navbar{
+@media only screen and (max-width: 360px) {
+  .navbar {
     width: 360px;
 
-   
     z-index: 9;
     position: fixed;
   }
-   .desktop{
+  .desktop {
     display: none;
-   }
-  .menu-icon{
+  }
+  .menu-icon {
     display: block;
     padding-left: 1rem;
     font-size: 1.4rem;
     z-index: 10;
     position: fixed;
   }
-  
-  .mobile   {
-   
-   
-    
+
+  .mobile {
     background-color: #fff;
     position: fixed;
-   
-    
   }
 
-  .mobile .nav_con{
+  .mobile .nav_con {
     display: flex;
     flex-direction: column;
     padding-top: 14rem;
@@ -141,39 +123,34 @@ border-radius: .5rem;
     gap: 1rem;
   }
 
-  
-  .navbar .nav_name{
-   padding-left: 4rem;
-   font-size: 1.4rem;
-   z-index: 1;
-    
+  .navbar .nav_name {
+    padding-left: 4rem;
+    font-size: 1.4rem;
+    z-index: 1;
   }
-   .cart_div i{
+  .cart_div i {
     font-size: 1.5rem;
-   
-   }
-  .cart_div{
+  }
+  .cart_div {
     font-size: 1rem;
     position: relative;
     right: -1rem;
-    
   }
-  .cart_div span{
+  .cart_div span {
     position: relative;
     top: -1rem;
-    left: -.6rem;
+    left: -0.6rem;
   }
 
-  .navbar .dlg_box{
+  .navbar .dlg_box {
     position: fixed;
     justify-content: center;
     padding-left: 2rem;
     z-index: 6;
-    background-color:white;
+    background-color: white;
     height: 10rem;
     width: 300px;
     top: 10rem;
     left: 0rem;
-    
-   }
+  }
 }

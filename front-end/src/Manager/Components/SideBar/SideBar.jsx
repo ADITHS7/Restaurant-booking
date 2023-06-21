@@ -21,12 +21,13 @@ const SideBar = () => {
      
       <nav>
       <Link to='/manager/tableassist' >Table Assist</Link>
-        <Link to='/manager/menu' >Our Menu</Link>
+      <Link to='/manager/serve' >Readt to serve</Link>
       <Link to='/manager/pendingorders' >Pending Orders</Link>
       <Link to='/manager/sales' >Sales</Link>
       <Link to='/manager/tableorders' >Table Orders</Link>
+      <Link to='/manager/tableorders' >Online Orders</Link>
       <Link to='/manager/chefreg' >Chef Registration</Link>
-      
+      <Link to='/manager/menu' >Our Menu</Link>
       <Link to='/manager/orderhistory' >OrderHisstory</Link>
       
       < Link onClick={logout} to = "/manager/signin">Logout</Link>
