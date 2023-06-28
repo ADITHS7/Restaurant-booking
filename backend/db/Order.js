@@ -10,6 +10,7 @@ phone:String,
 payment:String,
 date:String,
 cheTime:{type:String,default:"not cooked"},
+mngTime:{type:String,default:"Not completed"},
 status:{type:String,default:"pending"}
 })
 

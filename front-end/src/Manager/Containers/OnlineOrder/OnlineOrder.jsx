@@ -1,15 +1,15 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import './OrderHistory.css'
-import OrderHistry from '../../Components/OrderHistory/OrderHistry'
-const OrderHistory = () => {
+import OnlineSuccessfullOrders from '../../Components/OnlineSuccessfull)rders/OnlineSuccessfullOrders'
+
+const OnlineOrder = () => {
   const [data,setData]=useState([]);
   
   useEffect(()=>{
     getorders()
   })
   const getorders=()=>{
-    axios.get('http://localhost:5000/orders/success')
+    axios.get('http://localhost:5000/orders')
     .then((response)=>{
       console.log(response)
     setData(response.data)
@@ -19,29 +19,29 @@ const OrderHistory = () => {
     })
   }
 
-   
   const items= (data.length>0)? data.map((item,key)=>{
     
     
     return(
      <div>
       
-      <OrderHistry data={item}/>
+      <OnlineSuccessfullOrders data={item}/>
       
      </div>
      
     )
    }):<></>
+ 
   return (
     <div className='online_ordr'>
     {items.length>0?<div>
-    <div className='pending_orders'> Orders: {items.length}</div>
+    <div className='pending_orders'>Pending Orders: {items.length}</div>
     <h1> ORDERS</h1>
     
-    {items}</div>:<div className='pending_orders'> Orders: 0</div>
+    {items}</div>:<div className='pending_orders'>Pending Orders: 0</div>
   }
   </div>
   )
 }
 
-export default OrderHistory
+export default OnlineOrder

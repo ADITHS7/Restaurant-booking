@@ -34,10 +34,10 @@ const SuccessfullOrders = () => {
   return (
     <div className='online_ordr'>
       {items.length>0?<div>
-      <div className='pending_orders'>Cooked Orders: {items.length}</div>
+      <div className='pending_orders'> Orders: {items.length}</div>
       <h1> ORDERS</h1>
       
-      {items}</div>:<div className='pending_orders'>cooked Orders: 0</div>
+      {items}</div>:<div className='pending_orders'> Orders: 0</div>
     }
     </div>
   )

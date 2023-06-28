@@ -35,9 +35,11 @@ const Payment = ({cartItems}) => {
       }else{
         setCDlg(true)
       }
-      const addr = (JSON.parse(table)==="true")?null: (address.name+"~" +address.house+"~"+address.road+"~"+address.city+"~"
+      const addr = (table==="true")?null: (address.name+"~" +address.house+"~"+address.road+"~"+address.city+"~"
       +address.pincode+"~"+address.phone+"~"+address.phone2)
-   
+      const databaseDate = Date()
+      const dateOnly = databaseDate.slice(0, 24);
+     
     
     const setFormData=async(data)=>{
 
@@ -46,12 +48,15 @@ const Payment = ({cartItems}) => {
       const bodyFormData = new FormData();
         bodyFormData.append('oid',data._id);
         bodyFormData.append('qty',data.quantity);
-        bodyFormData.append('name',data.name);   
+        bodyFormData.append('name',data.name); 
+        if(table==="true") {
         bodyFormData.append("table",JSON.parse( table))
-        bodyFormData.append("tableNo",JSON.parse( tableNo))      
+        bodyFormData.append("tableNo",JSON.parse( tableNo))  
+        }else{  
         bodyFormData.append("address",addr);
+        }
         bodyFormData.append("payment",pay );
-        bodyFormData.append("date",Date())
+        bodyFormData.append("date",dateOnly)
 
        
         

@@ -18,9 +18,11 @@ const Navbar = ({cartItems}) => {
     menuState(false)
   }
   const tableCall=async()=>{
+    const databaseDate = Date()
+    const dateOnly = databaseDate.slice(0, 24);
   const formData = new FormData();
   formData.append("tableNo",JSON.parse(tableNo))
-  formData.append("time",Date())
+  formData.append("time",dateOnly)
   await axios.post('http://localhost:5000/tableAssistance', formData )
         
  .then((res)=>{

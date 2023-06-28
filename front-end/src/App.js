@@ -26,6 +26,9 @@ import ManagerSignup from "./Manager/Pages/ManagerSignup";
 import ManagerSignin from "./Manager/Pages/ManagerSignin";
 import ManagerOurMenu from "./Manager/Pages/ManagerOurMenu";
 import ManagerTableOrders from "./Manager/Pages/ManagerTableOrders";
+import ManagerOnlineOrders from "./Manager/Pages/ManagerOnlineOrders";
+
+
 
 
 
@@ -93,7 +96,7 @@ function App() {
             <Route path="/chef/home" element={<Home />} />
             <Route path="/chef/addproduct" element={<AddProduct />} />
             <Route path="/chef/update/:id" element={<Update />} />
-            
+           
           </Route>
         </Routes>
 
@@ -133,6 +136,7 @@ function App() {
         <Route path="/manager/tableassist" element={<ManagerTableAssist/>}/>
         <Route path="/manager/chefreg" element={<ManagerChefReg/>}/>
         <Route path="/manager/tableorders" element={<ManagerTableOrders/>}/>
+        <Route path="/manager/online" element={<ManagerOnlineOrders/>}/>
        
         
       </Route>

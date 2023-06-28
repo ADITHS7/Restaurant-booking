@@ -199,7 +199,7 @@ app.put("/updatestatus/:id",jsonparser(),async(req,res)=>{
   const order = await Order.updateOne(
    
      {_id:req.params.id},
-     {$set: {status:"cooked",cheTime:`${Date()}`}},
+     {$set: {status:"successfull",cheTime:`${Date()}`}},
     
     
   )

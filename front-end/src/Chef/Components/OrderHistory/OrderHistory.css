@@ -1,0 +1,70 @@
+
+
+.history_order .h_ord_container{
+  width: 60rem;
+ height: 13rem;
+
+}
+.h_ord_container .time{
+  display: flex;
+  justify-content: space-between;
+}
+.history_order .order_time{
+background-color: var(--sec-white);
+width: 14rem;
+height: 1.5rem;
+padding-left: 1rem;
+overflow: hidden;
+margin-top: 2rem;
+
+
+}
+.history_order .success_time{
+
+
+  background-color: var(--pri-green);
+  width: 14rem;
+  height: 1.5rem;
+  padding-left: 1rem;
+  overflow: hidden;
+  margin-top: 2rem;
+  
+  
+  }
+
+.history_order .order_dtls{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 60rem;
+  height: 9rem;
+  overflow: hidden;
+  background-color: var(--pri-white);
+  padding: .1rem;
+  border-radius: 0rem 0rem .5rem .5rem;
+  
+}
+
+.history_order .order_dtls .order_name_img img{
+  width: 8rem;
+}
+.history_order .order_name_img{
+  border-radius: .2rem;
+  border: none;
+  
+}
+
+.history_order .order_name_img p{
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.history_order .cod_payment{
+  color: rgb(194, 39, 39);
+}
+
+.history_order .onln_payment{
+  color: green;
+}

@@ -25,7 +25,7 @@ const PendingOrders = () => {
     
    return(
     <div>
-     
+     <pending/>
      <OnlineOrderList data={item}/>
      
     </div>

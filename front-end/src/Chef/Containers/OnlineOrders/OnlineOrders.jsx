@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './OnlineOrders.css'
-import OnlineOrderList from '../../Components/SideBar/OrderList/OnlineOrderList';
+import OnlineOrderList from '../../Components/OrderList/OnlineOrderList';
 
 const OnlineOrders = () => {
   

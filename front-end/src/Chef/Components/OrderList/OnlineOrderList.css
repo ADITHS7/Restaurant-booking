@@ -1,10 +1,6 @@
 
 
 .c_online_order .o_ord_container{
-  
-  
- 
-  
   width: 60rem;
  height: 13rem;
 
@@ -17,7 +13,6 @@ background-color: var(--sec-white);
 width: 14rem;
 height: 1.5rem;
 padding-left: 1rem;
-overflow: hidden;
 margin-top: 2rem;
 
 

@@ -11,6 +11,10 @@
 
   
 }
+.sidebar .active{
+  background-color: black;
+  color: red;
+}
 
 .chef_image{
   position: absolute;
