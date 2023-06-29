@@ -33,12 +33,12 @@ const OrderHistory = () => {
     )
    }):<></>
   return (
-    <div className='online_ordr'>
+    <div className='his_ordr'>
     {items.length>0?<div>
-    <div className='pending_orders'> Orders: {items.length}</div>
-    <h1> ORDERS</h1>
+    <div className='his_orders'> Orders: {items.length}</div>
+    <h1> ORDER HISTORY</h1>
     
-    {items}</div>:<div className='pending_orders'> Orders: 0</div>
+    {items}</div>:<div className='his_orders'> Orders: 0</div>
   }
   </div>
   )

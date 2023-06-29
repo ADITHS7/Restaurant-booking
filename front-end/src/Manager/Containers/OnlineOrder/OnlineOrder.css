@@ -1,0 +1,17 @@
+.online_ordr{
+  padding-left: 6rem;
+}
+.onln_orders{
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.online_ordr h1{
+  text-align: center;
+ 
+  color: var(--pri-black);
+  font-size: 2rem;
+  font-weight: 900;
+}
+

@@ -191,7 +191,7 @@ app.post('/orders',uploads.none(), async (req, res) => {
 });
 
 
-//update status of order
+//update status of order to successfull
 
 app.put("/updatestatus/:id",jsonparser(),async(req,res)=>{
   
@@ -208,7 +208,7 @@ app.put("/updatestatus/:id",jsonparser(),async(req,res)=>{
 
 
 //ordered data finding using find pending orders
-app.get('/orders',async(req,res)=>{
+app.get('/orders/pending',async(req,res)=>{
   const order =  await Order.find({status:"pending"})
   if(order.length>0){
     res.send(order)
@@ -216,8 +216,33 @@ app.get('/orders',async(req,res)=>{
     res.send({"result":"not found"})
   }
 })
+//successfull orders for online orders
+app.get('/orders/successfull',async(req,res)=>{
+  const order =  await Order.find({status:"successfull",table:"false"})
+  if(order.length>0){
+    res.send(order)
+  }else{
+    res.send({"result":"not found"})
+  }
+})
 
-//cooked orders
+//updating status to complete
+
+app.put("/updatestatuscompleted/:id",jsonparser(),async(req,res)=>{
+  
+  
+  const order = await Order.updateOne(
+   
+     {_id:req.params.id},
+     {$set: {status:"completed",mngTime:`${Date()}`,payment:'true'}},
+    
+    
+  )
+  res.send(order)
+ })
+
+
+//order history
 app.get('/orders/success',async(req,res)=>{
   const order =  await Order.find()
   if(order.length>0){

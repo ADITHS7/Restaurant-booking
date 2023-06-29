@@ -33,8 +33,8 @@ const TableOrders = () => {
   return (
     <div className='online_ordr'>
     {items.length>0?<div>
-    <div className='pending_orders'>Pending Orders: {items.length}</div>
-    <h1> ORDERS</h1>
+    <div className='pending_orders'></div>
+    <h1>TABLE BILL</h1>
     
     {items}
     </div>:<div><div className='pending_orders'>Pending Orders: 0</div>

@@ -1,18 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import './OnlineOrderList.css'
+import './Pending.css'
 
-const OnlineOrderList = ({data}) => {
+const Pending = ({data}) => {
   const [oData,setOData] = useState([])
    //const addr = JSON.parse(data.address)
   // var adde =JSON.parse(addr)
   console.log(oData)
-  const address = data.address.split('~');
-  
-  const setStatus=()=>{
-    
-  }
-
+  const address =data.address? data.address.split('~'):null
   useEffect(()=>{
     axios.get('http://localhost:5000/itemfind/'+data.oid)
     .then((response)=>{
@@ -42,7 +37,7 @@ const OnlineOrderList = ({data}) => {
        </div>
        <div className='order_phone'>
         {(data.table==="true")?<p>Table {data.tableNo}</p>:
-       <p>{data.phone}</p>}
+       <p>{address[5]}</p>}
        </div>
        <div className='order_address'>
        {(data.table==="true")?<p>Table </p>:<p>
@@ -50,15 +45,19 @@ const OnlineOrderList = ({data}) => {
        <p>{address[1]}</p>
        <p>{address[2]}</p>
        <p>{address[3]}</p>
-       <p>{address[4]}</p></p>}
+       <p>{address[4]}</p>
+       <p>{address[5]}</p>
+       <p>{address[6]}</p>
+       
+       </p>}
        </div>
        {(data.payment ==="true")?<div className='onln_payment'>Paid</div>:
        <div className='cod_payment'><i class="fa-solid fa-indian-rupee-sign"></i> {data.qty * oData.price}</div>}
-       <button onClick={()=>{setStatus()}}>{data.status}</button>
+       <button >{data.status}</button>
        </div>
       </div>
     </div>
   )
 }
 
-export default OnlineOrderList
+export default Pending

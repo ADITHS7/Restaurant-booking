@@ -11,7 +11,7 @@ const OnlineOrders = () => {
     getorders()
   })
   const getorders=()=>{
-    axios.get('http://localhost:5000/orders')
+    axios.get('http://localhost:5000/orders/pending')
     .then((response)=>{
       console.log(response)
     setData(response.data)

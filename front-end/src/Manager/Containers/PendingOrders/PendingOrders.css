@@ -1,4 +1,4 @@
-.online_ordr{
+.pend_ordr{
   padding: 2rem;
 }
 .pending_orders{
@@ -7,7 +7,7 @@
   font-weight: bold;
 }
 
-.online_ordr h1{
+.pend_ordr h1{
   text-align: center;
  
   color: var(--pri-black);

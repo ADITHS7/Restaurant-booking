@@ -53,6 +53,7 @@ const Payment = ({cartItems}) => {
         bodyFormData.append("table",JSON.parse( table))
         bodyFormData.append("tableNo",JSON.parse( tableNo))  
         }else{  
+          bodyFormData.append("table","false")
         bodyFormData.append("address",addr);
         }
         bodyFormData.append("payment",pay );

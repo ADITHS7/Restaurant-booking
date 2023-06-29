@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './PendingOrders.css'
-import OnlineOrderList from '../../Components/OrderList/OnlineOrderList'
+import Pending from '../../Components/Pending/Pending'
 
 const PendingOrders = () => {
   
@@ -11,7 +11,7 @@ const PendingOrders = () => {
     getorders()
   },[])
   const getorders=()=>{
-    axios.get('http://localhost:5000/orders')
+    axios.get('http://localhost:5000/orders/pending')
     .then((response)=>{
     setData(response.data)
     })
@@ -25,8 +25,8 @@ const PendingOrders = () => {
     
    return(
     <div>
-     <pending/>
-     <OnlineOrderList data={item}/>
+    
+     <Pending data={item}/>
      
     </div>
     
@@ -38,10 +38,10 @@ const PendingOrders = () => {
   //searching item from chef database
   
   return (
-    <div className='online_ordr'>
+    <div className='pend_ordr'>
       {items.length>0?<div>
       <div className='pending_orders'>Pending Orders: {items.length}</div>
-      <h1> ORDERS</h1>
+      <h1>PENDING ORDERS</h1>
       
       {items}
       </div>:<div><div className='pending_orders'>Pending Orders: 0</div>

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import './OnlineOrder.css'
 import OnlineSuccessfullOrders from '../../Components/OnlineSuccessfull)rders/OnlineSuccessfullOrders'
 
 const OnlineOrder = () => {
@@ -9,7 +10,7 @@ const OnlineOrder = () => {
     getorders()
   })
   const getorders=()=>{
-    axios.get('http://localhost:5000/orders')
+    axios.get('http://localhost:5000/orders/successfull')
     .then((response)=>{
       console.log(response)
     setData(response.data)
@@ -35,10 +36,10 @@ const OnlineOrder = () => {
   return (
     <div className='online_ordr'>
     {items.length>0?<div>
-    <div className='pending_orders'>Pending Orders: {items.length}</div>
-    <h1> ORDERS</h1>
+    <div className='onln_orders'>Online Orders: {items.length}</div>
+    <h1>ONLINE ORDERS</h1>
     
-    {items}</div>:<div className='pending_orders'>Pending Orders: 0</div>
+    {items}</div>:<div className='onln_orders'>Pending Orders: 0</div>
   }
   </div>
   )

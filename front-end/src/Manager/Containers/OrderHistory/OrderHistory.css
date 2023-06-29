@@ -1,0 +1,22 @@
+
+
+.his_orders{
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
+.his_ordr{
+  padding: 2rem;
+}
+
+
+.his_ordr h1{
+  text-align: center;
+ 
+  color: var(--pri-black);
+  font-size: 2rem;
+  font-weight: 900;
+}

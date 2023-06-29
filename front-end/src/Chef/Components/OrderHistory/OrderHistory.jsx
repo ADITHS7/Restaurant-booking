@@ -26,6 +26,8 @@ const OrderHistory = ({data}) => {
   },[])
   
   let src = 'http://localhost:5000/uploads/'+oData.url
+  const databaseChefDate =data.cheTime
+  const chetime= databaseChefDate.slice(0, 24)
   return (
     <div className='history_order'>
      
@@ -35,7 +37,7 @@ const OrderHistory = ({data}) => {
       <p>{data.date}</p>
       </div>
       <div className="success_time">
-        <p>{data.cheTime}</p>
+        <p>{chetime}</p>
       </div>
       </div>
      <div className='order_dtls'>

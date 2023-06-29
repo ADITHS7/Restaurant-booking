@@ -1,10 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import './OrderHistry.css'
 const OrderHistry = ({data}) => {
   const [oData,setOData] = useState([])
    
   
-  const address = data.address.split('~');
+  const address =data.address? data.address.split('~'):null
   const loadData = ()=>{
     
     axios.get('http://localhost:5000/itemfind/'+data.oid)
@@ -25,12 +26,21 @@ const OrderHistry = ({data}) => {
   },[])
   
   let src = 'http://localhost:5000/uploads/'+oData.url
+  const databaseChefDate =data.cheTime
+  const chetime= databaseChefDate.slice(0, 24)
+  const databaseMngDate =data.mngTime
+  const mngTime= databaseMngDate.slice(0, 24)
+  const databaseOrdDate =data.date
+  const ordTime= databaseOrdDate.slice(0, 24)
   return (
-    <div className='online_order'>
+    <div className='order_history'>
      
       <div className='o_ord_container'>
       <div className='order_time'>
-      <p>{data.cheTime}</p>
+      <p className='ord_time'>{oData._id}</p>
+      <p className='ord_time'>{ordTime}</p>
+      <p className='che_time'>{chetime}</p>
+      <p className='mng_time'>{mngTime}</p>
       </div>
      <div className='order_dtls'>
       <div className='order_name_img'>
@@ -43,7 +53,7 @@ const OrderHistry = ({data}) => {
        </div>
        <div className='order_phone'>
         {(data.table==="true")?<p>Table {data.tableNo}</p>:
-       <p>{data.phone}</p>}
+       <p>{address[5]}</p>}
        </div>
        <div className='order_address'>
        {(data.table==="true")?<p>Table </p>:<p>
@@ -51,7 +61,10 @@ const OrderHistry = ({data}) => {
        <p>{address[1]}</p>
        <p>{address[2]}</p>
        <p>{address[3]}</p>
-       <p>{address[4]}</p></p>}
+       <p>{address[4]}</p>
+       <p>{address[5]}</p>
+       <p>{address[6]}</p>
+       </p>}
        </div>
        {(data.payment ==="true")?<div className='onln_payment'>Paid</div>:
        <div className='cod_payment'><i class="fa-solid fa-indian-rupee-sign"></i> {data.qty * oData.price}</div>}
