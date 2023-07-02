@@ -51,9 +51,12 @@ const TableOrder = ({data}) => {
        {(data.payment ==="true")?<div className='onln_payment'>Paid</div>:
        <div className='cod_payment'><i class="fa-solid fa-indian-rupee-sign"></i> {data.qty * oData.price}</div>}
        <button >{data.status}</button>
+       
        </div>
+      
       </div>
       :null}
+      
     </div>
   )
 }

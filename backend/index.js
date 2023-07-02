@@ -262,11 +262,22 @@ app.get('/orders/table',async(req,res)=>{
 })
 
 
-
+//finding product
 app.get('/itemfind/:id',async(req,res)=>{
   const orderitem = await Product.findOne({_id:req.params.id})
   res.send(orderitem)
   
+})
+
+//table no finding
+app.get('/tableno/:key',async(req,res)=>{
+  let result = await Order.find(
+    {tableNo: { $regex: req.params.key }},
+   
+    
+
+  )
+  res.send(result)
 })
 
 
