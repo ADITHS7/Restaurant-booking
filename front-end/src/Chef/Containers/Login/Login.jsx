@@ -55,8 +55,7 @@ const Login = () => {
       <div className='login_right'>
       <div className="login_right_container">
         <h1>Welcome To The Besnik Kitchen</h1>
-        <p>New Here?</p>
-        <button onClick={()=>{navigate('/chefsignup')}}>SIGN UP</button>
+       
       </div>
       </div>
 

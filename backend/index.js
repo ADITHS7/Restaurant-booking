@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const multer  = require('multer');
 const path = require('path');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 require('./db/config');
 const Product = require("./db/Products");
 const Order = require('./db/Order')
@@ -53,7 +53,7 @@ const formData = (req)=>{
   }
 
 
- s 
+ 
   const name = req.body.name;
   const category = req.body.category;
   const sweet =req.body.sweet;
@@ -128,7 +128,7 @@ app.put("/update/:id",upload,async(req,res)=>{
     {$set: newData}
   
  )
- 
+
 })
 
 app.delete("/senddata/:id",async(req,res)=>{
@@ -196,6 +196,7 @@ app.post('/orders',uploads.none(), async (req, res) => {
 app.put("/updatestatus/:id",jsonparser(),async(req,res)=>{
   
   
+  
   const order = await Order.updateOne(
    
      {_id:req.params.id},
@@ -242,18 +243,33 @@ app.put("/updatestatuscompleted/:id",jsonparser(),async(req,res)=>{
  })
 
 
+//updating status to successfull for table by manager
+
+app.put("/completedtable/:id",jsonparser(),async(req,res)=>{
+  const order =  await Order.find({status:"successfull",tableNo:`${req.params.id}`})
+  if(order.length>0){
+    const ordr = await  Order.updateMany({tableNo:`${req.params.id}`,status:"successfull"},{$set:{status:"completed"}}
+    )
+    res.send(ordr) 
+  }
+  
+  
+ })
+
+
 //order history
 app.get('/orders/success',async(req,res)=>{
   const order =  await Order.find()
   if(order.length>0){
     res.send(order)
   }else{
+    
     res.send({"result":"not found"})
   }
 })
-//getting table
+//getting table bill
 app.get('/orders/table',async(req,res)=>{
-  const order =  await Order.find({status:"successfull",table:"true",payment:"false"})
+  const order =  await Order.find({status:"successfull",table:"true"})
   if(order.length>0){
     res.send(order)
   }else{
@@ -278,6 +294,17 @@ app.get('/tableno/:key',async(req,res)=>{
 
   )
   res.send(result)
+})
+
+//sales
+
+app.get('/orders/completed',async(req,res)=>{
+  const order =  await Order.find({status:"completed"})
+  if(order.length>0){
+    res.send(order)
+  }else{
+    res.send({"result":"not found"})
+  }
 })
 
 

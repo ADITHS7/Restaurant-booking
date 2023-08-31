@@ -32,7 +32,7 @@ const SuccessfullOrders = () => {
    )
   }):<></>
   return (
-    <div className='online_ordr'>
+    <div className='S_online_ordr'>
       {items.length>0?<div>
       <div className='pending_orders'> Orders: {items.length}</div>
       <h1> ORDERS</h1>

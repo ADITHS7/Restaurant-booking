@@ -22,7 +22,7 @@ const OnlineOrders = () => {
   }
  
   const items= (data.length>0)? data.map((item,key)=>{
-    
+   
     
    return(
     <div>
@@ -39,7 +39,7 @@ const OnlineOrders = () => {
   //searching item from chef database
   
   return (
-    <div className='online_ordr'>
+    <div className='o_online_ordr'>
       {items.length>0?<div>
       <div className='pending_orders'>Pending Orders: {items.length}</div>
       <h1> ORDERS</h1>

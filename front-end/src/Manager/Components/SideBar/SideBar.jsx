@@ -15,6 +15,7 @@ const SideBar = () => {
     localStorage.clear();
     navigate('/manager/signin')
   }
+
   
   return (
     <div className='manager_sidebar'>

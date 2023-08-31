@@ -10,6 +10,8 @@ import {
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 const Payment = ({cartItems}) => {
+
+
   const [method,setMethod]=useState(false)
   const [cDlg,setCDlg]=useState(false)
   const [oDlg,setODlg] = useState(false)
@@ -30,6 +32,7 @@ const Payment = ({cartItems}) => {
     
     //const addr = toString(address)
     //const addr = JSON.stringify(address);
+    //const totalPrice = cartItems.reduce((price,product)=>price +product.quantity * product.price,0 )
       if(pay==true){
         setODlg(true)
       }else{
@@ -44,7 +47,6 @@ const Payment = ({cartItems}) => {
     const setFormData=async(data)=>{
 
      
-      
       const bodyFormData = new FormData();
         bodyFormData.append('oid',data._id);
         bodyFormData.append('qty',data.quantity);
@@ -57,8 +59,10 @@ const Payment = ({cartItems}) => {
         bodyFormData.append("address",addr);
         }
         bodyFormData.append("payment",pay );
-        bodyFormData.append("date",dateOnly)
-
+        bodyFormData.append("date",dateOnly);
+        bodyFormData.append("total",data.price*data.quantity);
+        
+  
        
         
        await axios.post('http://localhost:5000/orders', bodyFormData, {
@@ -82,9 +86,6 @@ const Payment = ({cartItems}) => {
   
   ),
   
-  
-  
-      
         
       )
 
@@ -162,7 +163,7 @@ const Payment = ({cartItems}) => {
         <div className='payment_select'>
       <label name="pay">
         <span>
-        <input type ='radio'  onClick={()=>{setMethod(false); }}  onChange={()=>{setPay(false)}}/>Cash On Delivery
+        <input type ='radio'  onClick={()=>{setMethod(false); }}  onChange={()=>{setPay(false)}}/>Pay Later
         </span>
 
         <span>

@@ -10,7 +10,7 @@ import axios from 'axios';
 
 const ProductList = ({handleAddProduct}) => {
   const [data,setData]=useState([]);
-  //const [cartItems,setCartItems]=useState([]);
+   //const [cartItems,setCartItems]=useState([]);
   
 useEffect(()=>{
   getProducts()
@@ -26,14 +26,6 @@ const getProducts=()=>{
   })
 }
 
-
-
-
-
-
-
-
-
 const handleSearch =(e)=>{
   let key =(e.target.value);
   
@@ -41,9 +33,7 @@ const handleSearch =(e)=>{
     axios.get(`http://localhost:5000/search/${key}`)
     .then((res)=>{
       console.log(res);
-      setData(res.data)
-
-      
+      setData(res.data)      
      })
      .catch((err)=>{
       console.log(err)
@@ -86,7 +76,7 @@ const items= (data.length>0)? data.map((item,key)=>{
   )
 }
 
-):<h1 className='no_prod'>No Items Found Please Add Items!</h1>
+):<h1  className='no_prod'>No Items Found !</h1>
 
 
   return (

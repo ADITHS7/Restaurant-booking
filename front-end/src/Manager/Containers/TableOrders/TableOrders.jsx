@@ -1,9 +1,22 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import TableOrder from '../../Components/TableOrder/TableOrder'
+import './TableOrders.css'
 const TableOrders = () => {
   const [data,setData]=useState([]);
-  const [oData,setOData] = useState([])
+  const tblnum = localStorage.getItem('tableNum')
+  var sum = 0;
+  
+  const statusUpdate=()=>{
+    axios.put(`http://localhost:5000/completedtable/${tblnum}`)
+    .then((res)=>{
+      getorders()      
+     })
+     .catch((err)=>{
+      console.log(err)
+     })
+    
+  }
   
   const getorders=()=>{
     axios.get('http://localhost:5000/orders/table')
@@ -19,7 +32,7 @@ const TableOrders = () => {
   
 const handleSearch =(e)=>{
   let key =(e.target.value);
-  console.log(key,"keyyy")
+  localStorage.setItem("tableNum",key)
   
   if(key){
     axios.get(`http://localhost:5000/tableno/${key}`)
@@ -36,17 +49,17 @@ const handleSearch =(e)=>{
     }
   
 }
- 
+
+for(let i = 0; i< data.length; i++)
+{
+  if(data[i].status === "successfull")
+ sum = parseInt(sum) + parseInt( data[i].total)
+}
   const items= (data.length>0)? data.map((item,key)=>{
-    axios.get('http://localhost:5000/itemfind/'+data.oid)
-    .then((response)=>{
-    setOData(response.data)
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
-  
+     
+   
     
+     
     return(
      <div>
       
@@ -58,7 +71,7 @@ const handleSearch =(e)=>{
    }):<></>
    
   return (
-    <div className='online_ordr'>
+    <div className='table_ordr'>
        <h1>TABLE BILL</h1>
       <div className='filter'>
           <i  class="fa-solid fa-sliders"></i>
@@ -70,18 +83,17 @@ const handleSearch =(e)=>{
         <option value='4'>4</option>
         <option value='5'>5</option>
         <option value=''>none</option>
-      </select>
-          
+      </select>          
           
           </div>
+
     {items.length>0?<div>
-    <div className='pending_orders'></div>
-   
-    
-    
+    <div className='pending_bill'>
+      
     {items}
-    
-    </div>:<div><div className='pending_orders'>SELECT A VALID TABLE NO</div>
+    <button className='rupee_bill' onClick={()=>{statusUpdate()}}>pay <i class="fa-solid fa-indian-rupee-sign"></i> {sum}  </button>
+    </div>
+    </div>:<div><div className='pending_nil'>SELECT A VALID TABLE NO</div>
     
     </div>}
   </div>

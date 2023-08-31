@@ -38,8 +38,6 @@ const handleImg = (e)=>{
  setChange(true)
  setPrevImg(URL.createObjectURL(e.target.files[0]))
 setItem({url:e.target.files[0]})
- 
- 
 }
 
 const sendData=(e)=>{

@@ -5,12 +5,13 @@
   padding: 2rem;
 
   gap: 5rem;
-  margin: 5rem auto;
+  margin: 5rem 5rem 5rem 9rem;
+
 }
 
 .user_prd_card {
   width: 14rem;
-  height: 24rem;
+  height: 27rem;
   outline: 0.01rem solid var(--pri-black);
   background-color: var(--sec-white);
   border-radius: 0.5rem;
@@ -33,8 +34,9 @@
 }
 
 .user_prd_card .prd_desc {
-  width: 14rem;
+  width: 13rem;
   height: 4rem;
+  
 }
 
 .user_prd_card .prd_desc p {
@@ -44,8 +46,9 @@
 .user_prd_card .cta {
   display: flex;
   justify-content: space-around;
-  align-items: baseline;
-  margin-bottom: 5rem;
+ 
+ margin-top: 4rem;
+ 
 }
 
 .user_prd_card .cta .cart_btn button {
@@ -56,8 +59,21 @@
   color: white;
   outline: none;
   border-radius: 0.5rem;
+   
 }
+.user_prd_card .cta .cart_btn button:hover{
+opacity: .8;
 
+}
+.no_prod{
+  text-align: center;
+  padding-left: 19rem;
+}
+.user_prd_card .cta .cart_btn button:active{
+
+margin-top: 1rem;
+background-color: orange;
+}
 @media only screen and (max-width: 360px) {
   .user_prd_container {
     width: 360px;
@@ -68,7 +84,7 @@
   }
   .user_prd_card {
     width: 180px;
-    height: 24rem;
+    height: 28rem;
     outline: 0.001rem solid var(--pri-black);
     background-color: var(--sec-white);
     border-radius: 0rem;

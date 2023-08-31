@@ -1,0 +1,43 @@
+.table_ordr{
+  padding: 2rem;
+}
+.pending_nil{
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+}
+
+.pending_bill{
+  margin-left: 4rem;
+  margin-top: 4rem;
+}
+
+.table_ordr h1{
+  text-align: center; 
+  color: var(--pri-black);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.filter i{
+  color: var(--pri-orange);
+  font-size: 2rem;
+  margin-right: .5rem;
+}
+
+.filter label{
+  font-size: 1.4rem;
+}
+
+.rupee_bill{
+  color: white;
+  width: 130px;
+  height: 50px;
+  border: none;
+  margin-left: 52rem;
+  margin-top: .5rem;
+  background-color: var(--pri-orange);
+  font-weight: 500;
+
+}

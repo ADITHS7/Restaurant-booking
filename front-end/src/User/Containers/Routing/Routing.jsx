@@ -7,8 +7,7 @@ import UserFront from '../../Pages/UserFront';
 import Checkout from '../Checkout/Checkout';
 import Payment from '../Payment/Payment';
 
-const Routing = ({handleAddProduct,cartItems,handleRemoveProduct,handleCartClearence}) => {
-  
+const Routing = ({handleAddProduct,cartItems,handleRemoveProduct,handleCartClearence}) => { 
   return (
     <div>
       <Routes>

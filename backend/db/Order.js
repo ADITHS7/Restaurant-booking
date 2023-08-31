@@ -11,7 +11,8 @@ payment:String,
 date:String,
 cheTime:{type:String,default:"not cooked"},
 mngTime:{type:String,default:"Not completed"},
-status:{type:String,default:"pending"}
+status:{type:String,default:"pending"},
+total:String
 })
 
 module.exports = mongoose.model("order",orderSchema);
